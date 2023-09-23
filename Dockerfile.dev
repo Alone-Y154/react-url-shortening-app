@@ -1,0 +1,13 @@
+# for development env
+
+FROM node:alpine3.10
+
+WORKDIR /url-shortening-app
+
+COPY ./package.json /url-shortening-app
+
+RUN npm install
+
+COPY . /url-shortening-app
+
+CMD [ "npm","start" ]
